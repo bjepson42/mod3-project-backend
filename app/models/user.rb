@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :drawings
+  has_many :games
   has_many :bets
 end

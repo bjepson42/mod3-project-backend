@@ -1,4 +1,4 @@
-class Drawing < ApplicationRecord
+class Game < ApplicationRecord
   belongs_to :user
   has_one :bet, through: :users
 end
