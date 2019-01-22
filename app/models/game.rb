@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
   belongs_to :user
-  has_one :bet
+  belongs_to :word
+  belongs_to :bet
 end

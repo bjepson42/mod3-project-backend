@@ -1,3 +1,3 @@
 class BetSerializer < ActiveModel::Serializer
-  attributes :id, :bet, :string
+  attributes :id, :bet
 end
