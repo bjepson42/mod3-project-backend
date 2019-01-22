@@ -19,18 +19,17 @@ word_nine = Word.create(name:"Software Engineer")
 word_ten = Word.create(name:"Star Wars")
 
 
-
-#Users
-mandy = User.create(name:"Mandy")
-beau = User.create(name:"Beau")
-
-#usergames
-game1 = Game.create(bet_id:1, word_id_1:1,word_id_2:4,winner_id:1,loser_id:2)
-game2 = Game.create(bet_id:2,word_id_1:3,word_id_2:5,winner_id:2,loser_id:1)
-
 #bets
 bet1 = Bet.create(bet: "Everything You Say For The Next 15 Minutes Must Be Sung To The Tune Of “Happy Birthday")
 bet2 = Bet.create(bet: "Smell The Feet Of Everyone In The Room And Rank Them From Best To Worst")
 bet3 = Bet.create(bet: "Eat A Teaspoon Of Either Mustard, Soy Sauce Or Hot Sauce")
 bet4 = Bet.create(bet: "Talk Without Closing Your Mouth")
 bet5 = Bet.create(bet: "Call A Pizza Place And Ask If They Use Cruelty-Free Wheat In Their Dough")
+
+#Users
+mandy = User.create(name:"Mandy")
+beau = User.create(name:"Beau")
+
+#usergames
+game1 = Game.create(bet_id:1, word_one_id:1,word_two_id:4,winner_id:1,loser_id:2)
+game2 = Game.create(bet_id:2,word_one_id:3,word_two_id:5,winner_id:2,loser_id:1)

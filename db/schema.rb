@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_01_22_150204) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "word_id_1"
-    t.integer "word_id_2"
+    t.integer "word_one_id"
+    t.integer "word_two_id"
     t.integer "bet_id"
     t.integer "winner_id"
     t.integer "loser_id"
