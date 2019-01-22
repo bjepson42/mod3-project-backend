@@ -2870,3 +2870,569 @@ Migrating to CreateWords (20190122150204)
   ↳ db/seeds.rb:35
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:35
+Started GET "/" for 127.0.0.1 at 2019-01-22 11:35:11 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-22 11:35:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-01-22 11:35:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (9.94ms)
+Completed 200 OK in 61ms (Views: 38.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2019-01-22 11:35:24 -0500
+Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (5.98ms)
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/bets" for 127.0.0.1 at 2019-01-22 11:35:31 -0500
+Processing by BetsController#index as HTML
+  [1m[36mBet Load (0.4ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.72ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2019-01-22 11:35:38 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (7.65ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `word_id_1' for #<Game:0x007fb240412c70>
+Did you mean?  word_two_id):
+  
+app/controllers/games_controller.rb:3:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (204.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_development"[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (211.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_test"[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (508.7ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_development" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (436.0ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_test" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (202.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_development"[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (203.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_test"[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (350.7ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_development" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (421.5ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_test" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(841640573534668110)[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20190120234245)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190120234245_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190120234245"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateBets (20190120234325)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "bets" ("id" bigserial primary key, "bet" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190120234325_create_bets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190120234325"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateGames (20190121004241)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "word_one_id" integer, "word_two_id" integer, "bet_id" integer, "winner_id" integer, "loser_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190121004241_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190121004241"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateWords (20190122150204)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190122150204_create_words.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190122150204"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-22 16:38:08.372872"], ["updated_at", "2019-01-22 16:38:08.372872"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(841640573534668110)[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_development" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_test" ENCODING = 'unicode'[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "bets" ("id" bigserial primary key, "bet" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "games" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "word_one_id" integer, "word_two_id" integer, "bet_id" integer, "winner_id" integer, "loser_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "words" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "bets" ("id" bigserial primary key, "bet" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "games" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "word_one_id" integer, "word_two_id" integer, "bet_id" integer, "winner_id" integer, "loser_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "words" CASCADE[0m
+  ↳ db/schema.rb:40
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:40
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190122150204)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190120234245),
+(20190121004241),
+(20190120234325);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-22 16:38:13.865339"], ["updated_at", "2019-01-22 16:38:13.865339"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-22 16:38:13.869201"], ["key", "environment"]]
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWord Create (0.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Space Kitten"], ["created_at", "2019-01-22 16:38:13.900811"], ["updated_at", "2019-01-22 16:38:13.900811"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWord Create (0.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pikachu"], ["created_at", "2019-01-22 16:38:13.903770"], ["updated_at", "2019-01-22 16:38:13.903770"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWord Create (0.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ghostbusters"], ["created_at", "2019-01-22 16:38:13.905722"], ["updated_at", "2019-01-22 16:38:13.905722"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Amazon"], ["created_at", "2019-01-22 16:38:13.907796"], ["updated_at", "2019-01-22 16:38:13.907796"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Black Friday"], ["created_at", "2019-01-22 16:38:13.910428"], ["updated_at", "2019-01-22 16:38:13.910428"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWord Create (0.4ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Paul Ryan"], ["created_at", "2019-01-22 16:38:13.913636"], ["updated_at", "2019-01-22 16:38:13.913636"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWord Create (0.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mulan"], ["created_at", "2019-01-22 16:38:13.916300"], ["updated_at", "2019-01-22 16:38:13.916300"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWord Create (0.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pirate"], ["created_at", "2019-01-22 16:38:13.918231"], ["updated_at", "2019-01-22 16:38:13.918231"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWord Create (0.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Software Engineer"], ["created_at", "2019-01-22 16:38:13.919841"], ["updated_at", "2019-01-22 16:38:13.919841"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Star Wars"], ["created_at", "2019-01-22 16:38:13.921940"], ["updated_at", "2019-01-22 16:38:13.921940"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mBet Create (0.6ms)[0m  [1m[32mINSERT INTO "bets" ("bet", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["bet", "Everything You Say For The Next 15 Minutes Must Be Sung To The Tune Of “Happy Birthday"], ["created_at", "2019-01-22 16:38:13.935032"], ["updated_at", "2019-01-22 16:38:13.935032"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mBet Create (0.4ms)[0m  [1m[32mINSERT INTO "bets" ("bet", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["bet", "Smell The Feet Of Everyone In The Room And Rank Them From Best To Worst"], ["created_at", "2019-01-22 16:38:13.937572"], ["updated_at", "2019-01-22 16:38:13.937572"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mBet Create (0.3ms)[0m  [1m[32mINSERT INTO "bets" ("bet", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["bet", "Eat A Teaspoon Of Either Mustard, Soy Sauce Or Hot Sauce"], ["created_at", "2019-01-22 16:38:13.939814"], ["updated_at", "2019-01-22 16:38:13.939814"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mBet Create (0.2ms)[0m  [1m[32mINSERT INTO "bets" ("bet", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["bet", "Talk Without Closing Your Mouth"], ["created_at", "2019-01-22 16:38:13.942185"], ["updated_at", "2019-01-22 16:38:13.942185"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBet Create (0.2ms)[0m  [1m[32mINSERT INTO "bets" ("bet", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["bet", "Call A Pizza Place And Ask If They Use Cruelty-Free Wheat In Their Dough"], ["created_at", "2019-01-22 16:38:13.944221"], ["updated_at", "2019-01-22 16:38:13.944221"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mandy"], ["created_at", "2019-01-22 16:38:13.956100"], ["updated_at", "2019-01-22 16:38:13.956100"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beau"], ["created_at", "2019-01-22 16:38:13.958916"], ["updated_at", "2019-01-22 16:38:13.958916"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("word_one_id", "word_two_id", "bet_id", "winner_id", "loser_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["word_one_id", 1], ["word_two_id", 4], ["bet_id", 1], ["winner_id", 1], ["loser_id", 2], ["created_at", "2019-01-22 16:38:13.989782"], ["updated_at", "2019-01-22 16:38:13.989782"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("word_one_id", "word_two_id", "bet_id", "winner_id", "loser_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["word_one_id", 3], ["word_two_id", 5], ["bet_id", 2], ["winner_id", 2], ["loser_id", 1], ["created_at", "2019-01-22 16:38:13.998252"], ["updated_at", "2019-01-22 16:38:13.998252"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+Started GET "/games" for 127.0.0.1 at 2019-01-22 11:38:29 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.68ms)
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 4.1ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/games" for 127.0.0.1 at 2019-01-22 11:52:45 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.7ms)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2019-01-22 11:52:49 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::JsonApi (0.71ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2019-01-22 11:52:54 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::JsonApi (0.6ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-22 11:53:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.75ms)
+Completed 200 OK in 18ms (Views: 2.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/bets/1" for 127.0.0.1 at 2019-01-22 11:53:06 -0500
+Processing by BetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bets_controller.rb:7
+[active_model_serializers] Rendered BetSerializer with ActiveModelSerializers::Adapter::JsonApi (1.13ms)
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/words/1" for 127.0.0.1 at 2019-01-22 11:53:11 -0500
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:7
+[active_model_serializers] Rendered WordSerializer with ActiveModelSerializers::Adapter::JsonApi (0.65ms)
+Completed 200 OK in 15ms (Views: 2.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2019-01-22 11:58:57 -0500
+Processing by WordsController#index as HTML
+  [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (3.47ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2019-01-22 11:59:05 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.39ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2019-01-22 12:01:34 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/manonpilaud/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.2ms)
+
+
+  
+NoMethodError (undefined method `underscore' for :User:Symbol):
+  
+app/serializers/game_serializer.rb:3:in `<class:GameSerializer>'
+app/serializers/game_serializer.rb:1:in `<main>'
+app/controllers/games_controller.rb:3:in `index'
+Started GET "/users" for 127.0.0.1 at 2019-01-22 12:01:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (29.96ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column games.user_id does not exist
+LINE 1: SELECT "games".* FROM "games" WHERE "games"."user_id" = $1
+                                            ^
+HINT:  Perhaps you meant to reference the column "games.loser_id".
+: SELECT "games".* FROM "games" WHERE "games"."user_id" = $1):
+  
+app/controllers/users_controller.rb:3:in `index'
+Started GET "/bets" for 127.0.0.1 at 2019-01-22 12:02:25 -0500
+Processing by BetsController#index as HTML
+  [1m[36mBet Load (0.4ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+[active_model_serializers]   ↳ app/controllers/bets_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (19.56ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `underscore' for :User:Symbol):
+  
+app/serializers/game_serializer.rb:3:in `<class:GameSerializer>'
+app/serializers/game_serializer.rb:1:in `<main>'
+app/controllers/bets_controller.rb:3:in `index'
+Started GET "/bets" for 127.0.0.1 at 2019-01-22 12:02:51 -0500
+Processing by BetsController#index as HTML
+  [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (3.88ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2019-01-22 12:03:03 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.01ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2019-01-22 12:07:56 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:3
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.0ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2019-01-22 12:08:02 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::JsonApi (0.56ms)
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
