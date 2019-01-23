@@ -19,4 +19,11 @@ class Word < ApplicationRecord
     end
   end
 
+  def all_word_games
+    @all_word_games = []
+    @all_word_games << {word_game_ones: self.word_game_ones}
+    @all_word_games << {word_game_twos: self.word_game_ones}
+    @all_word_games.flatten
+  end
+
 end

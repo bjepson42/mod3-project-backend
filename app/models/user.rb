@@ -20,10 +20,10 @@ class User < ApplicationRecord
     end
   end
 
-  def all_games
-    @all_games = []
-    @all_games << {games_won: self.games_won}
-    @all_games << {games_lost: self.games_lost}
-    @all_games.flatten
+  def all_user_games
+    @all_user_games = []
+    @all_user_games << {games_won: self.games_won}
+    @all_user_games << {games_lost: self.games_lost}
+    @all_user_games.flatten
   end
 end

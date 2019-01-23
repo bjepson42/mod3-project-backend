@@ -1,3 +1,3 @@
 class WordSerializer < ActiveModel::Serializer
-  attributes :id, :name, :word_game_ones, :word_game_twos
+  attributes :id, :name,:all_word_games
 end
