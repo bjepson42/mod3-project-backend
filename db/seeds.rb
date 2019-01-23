@@ -37,3 +37,4 @@ beau = User.create(name:"Beau")
 #usergames
 game1 = Game.create(bet_id:1, word_one_id:1,word_two_id:4,winner_id:1,loser_id:2,drawing_one_id:1,drawing_two_id:2)
 game2 = Game.create(bet_id:2,word_one_id:3,word_two_id:5,winner_id:2,loser_id:1,drawing_one_id:3,drawing_two_id:4)
+game3 = Game.create(bet_id:3,word_one_id:5,word_two_id:4,winner_id:1,loser_id:2,drawing_one_id:1,drawing_two_id:4)
