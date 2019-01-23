@@ -35,8 +35,14 @@ mandy = User.create(name:"Mandy")
 beau = User.create(name:"Beau")
 
 #usergames
+<<<<<<< HEAD
 # game1 = Game.create(bet_id:1, word_one_id:1,word_two_id:4,winner_id:1,loser_id:2,drawing_one_id:1,drawing_two_id:2)
 # game2 = Game.create(bet_id:2,word_one_id:3,word_two_id:5,winner_id:2,loser_id:1,drawing_one_id:3,drawing_two_id:4)
 
 game1 = Game.create(bet_id: bet1.id, word_one_id: word_one.id, word_two_id: word_four.id, winner_id: mandy.id, loser_id: beau.id, drawing_one_id: drawing_one.id, drawing_two_id: drawing_two.id)
 game2 = Game.create(bet_id: bet1.id, word_one_id: word_three.id, word_two_id: word_five.id, winner_id: beau.id,loser_id: mandy.id, drawing_one_id: drawing_three.id, drawing_two_id: drawing_four.id)
+=======
+game1 = Game.create(bet_id:1, word_one_id:1,word_two_id:4,winner_id:1,loser_id:2,drawing_one_id:1,drawing_two_id:2)
+game2 = Game.create(bet_id:2,word_one_id:3,word_two_id:5,winner_id:2,loser_id:1,drawing_one_id:3,drawing_two_id:4)
+game3 = Game.create(bet_id:3,word_one_id:5,word_two_id:4,winner_id:1,loser_id:2,drawing_one_id:1,drawing_two_id:4)
+>>>>>>> 990d58146cbe9ddad9fd62fcd957b61fc5a3d7b4

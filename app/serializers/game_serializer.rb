@@ -1,8 +1,3 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :word_one_id, :word_two_id, :bet_id, :winner_id, :loser_id
-  # belongs_to :bet
-  # belongs_to :winner
-  # belongs_to :loser
-  # belongs_to :word_one
-  # belongs_to :word_two
+  attributes :id, :winner,:loser,:word_one, :word_two,:bet,:drawing_one, :drawing_two
 end
