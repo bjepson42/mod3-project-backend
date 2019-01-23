@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def index
+
     render json: User.all
+    #render json: {bets_info: Bet.first}
   end
 
   def show
