@@ -22,7 +22,7 @@ class BetsController < ApplicationController
 
   private
   def bet_params
-    params.require(:bet).permit(:bet)
+    params.require(:bet).permit(:name)
   end
 
 end

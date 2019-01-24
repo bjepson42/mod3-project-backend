@@ -79822,3 +79822,1816 @@ Completed 200 OK in 243ms (Views: 41.4ms | ActiveRecord: 22.5ms)
 Completed 200 OK in 281ms (Views: 49.3ms | ActiveRecord: 94.9ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:18:13 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (4.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (2.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (3.9ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (1.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (1.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (1.9ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (2.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (3.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (1.6ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (2.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (1.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE Bet Load (0.5ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 3]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 4]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 5]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 6]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 7]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 8]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 9]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mGame Load (7.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 10]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1747.98ms)
+Completed 200 OK in 1870ms (Views: 1776.7ms | ActiveRecord: 82.6ms)
+
+
+Started GET "/bets" for 127.0.0.1 at 2019-01-24 09:18:19 -0500
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:18:19 -0500
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:18:19 -0500
+Processing by BetsController#index as */*
+  [1m[36mBet Load (1.7ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+[active_model_serializers]   [1m[36mGame Load (42.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Beau", "user"=>{"name"=>"Beau"}}
+[active_model_serializers]   [1m[36mWord Load (38.9ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#create as JSON
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  [1m[35m (34.5ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"name"=>"Mandy", "user"=>{"name"=>"Mandy"}}
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   [1m[36mWord Load (12.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (6.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mDrawing Load (25.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (25.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (12.8ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers]   [1m[36mDrawing Load (29.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (11.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   ↳ app/models/bet.rb:8
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (32.94ms)
+[active_model_serializers]   [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (29.96ms)
+Completed 200 OK in 492ms (Views: 129.1ms | ActiveRecord: 53.6ms)
+
+
+[active_model_serializers]   ↳ app/models/bet.rb:9
+Completed 200 OK in 403ms (Views: 56.1ms | ActiveRecord: 38.3ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mWord Load (9.1ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (1.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (2.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 2]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 3]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 4]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 5]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1589.3ms)
+Completed 200 OK in 1651ms (Views: 1451.5ms | ActiveRecord: 194.9ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2019-01-24 09:18:59 -0500
+Started POST "/bets" for 127.0.0.1 at 2019-01-24 09:18:59 -0500
+Processing by WordsController#index as */*
+Processing by BetsController#create as JSON
+  Parameters: {"bet"=>"Do a 2 minute wall sit"}
+  [1m[36mWord Load (3.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+Completed 500 Internal Server Error in 716ms (ActiveRecord: 0.0ms)
+
+
+[active_model_serializers]   [1m[36mGame Load (120.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 1]]
+  
+[active_model_serializers]   ↳ app/models/word.rb:7
+NoMethodError (undefined method `permit' for "Do a 2 minute wall sit":String
+Did you mean?  print):
+  
+[active_model_serializers]   [1m[36mWord Load (2.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+app/controllers/bets_controller.rb:25:in `bet_params'
+app/controllers/bets_controller.rb:11:in `create'
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (192.8ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (4.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (1.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (1.6ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (2.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 2]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 3]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (2.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (1.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (1.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (1.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE Bet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 4]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (4.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 5]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 6]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 7]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 8]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 9]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 10]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (3.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 11]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 12]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (2.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 13]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 14]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2430.75ms)
+Completed 200 OK in 2802ms (Views: 2432.8ms | ActiveRecord: 365.4ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (5030.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_development"[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (191.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_development"[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (163.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pictionary-backend_test"[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (468.2ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_development" ENCODING = 'unicode'[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (379.1ms)[0m  [1m[35mCREATE DATABASE "pictionary-backend_test" ENCODING = 'unicode'[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(841640573534668110)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateUsers (20190120234245)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190120234245_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190120234245"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateBets (20190120234325)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "bets" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190120234325_create_bets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190120234325"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateGames (20190121004241)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "word_one_id" integer, "word_two_id" integer, "bet_id" integer, "winner_id" integer, "loser_id" integer, "drawing_one_id" integer, "drawing_two_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190121004241_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190121004241"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateWords (20190122150204)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "words" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190122150204_create_words.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190122150204"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateDrawings (20190122201817)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "drawings" ("id" bigserial primary key, "name" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190122201817_create_drawings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190122201817"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-24 14:21:12.519230"], ["updated_at", "2019-01-24 14:21:12.519230"]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(841640573534668110)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWord Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Space Kitten"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mWord Create (0.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Space Kitten"], ["created_at", "2019-01-24 14:21:48.631532"], ["updated_at", "2019-01-24 14:21:48.631532"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pikachu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mWord Create (0.4ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pikachu"], ["created_at", "2019-01-24 14:21:48.637745"], ["updated_at", "2019-01-24 14:21:48.637745"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Ghostbusters"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ghostbusters"], ["created_at", "2019-01-24 14:21:48.642161"], ["updated_at", "2019-01-24 14:21:48.642161"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Amazon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Amazon"], ["created_at", "2019-01-24 14:21:48.646221"], ["updated_at", "2019-01-24 14:21:48.646221"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Black Friday"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Black Friday"], ["created_at", "2019-01-24 14:21:48.650289"], ["updated_at", "2019-01-24 14:21:48.650289"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Paul Ryan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Paul Ryan"], ["created_at", "2019-01-24 14:21:48.654752"], ["updated_at", "2019-01-24 14:21:48.654752"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Mulan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mulan"], ["created_at", "2019-01-24 14:21:48.659225"], ["updated_at", "2019-01-24 14:21:48.659225"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWord Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pirate"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pirate"], ["created_at", "2019-01-24 14:21:48.663644"], ["updated_at", "2019-01-24 14:21:48.663644"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Software Engineer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Software Engineer"], ["created_at", "2019-01-24 14:21:48.666812"], ["updated_at", "2019-01-24 14:21:48.666812"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Star Wars"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWord Create (0.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Star Wars"], ["created_at", "2019-01-24 14:21:48.671179"], ["updated_at", "2019-01-24 14:21:48.671179"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDrawing Create (2.1ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Kitten"], ["img", "https://www.clipartmax.com/png/middle/39-399672_a-transparent-space-cat-for-you-all-space-cat-drawing.png"], ["created_at", "2019-01-24 14:21:48.687617"], ["updated_at", "2019-01-24 14:21:48.687617"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mDrawing Create (0.4ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Amazon"], ["img", "https://format-com-cld-res.cloudinary.com/image/private/s--hsAYqKnI--/c_limit,g_center,h_65535,w_1600/a_auto,fl_keep_iptc.progressive,q_95/v1/d32b435aac96df828362a61915473477/amazon_sketch.jpg"], ["created_at", "2019-01-24 14:21:48.693912"], ["updated_at", "2019-01-24 14:21:48.693912"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Black Friday"], ["img", "http://www.sketchplease.com/wp-content/sketches/archangelo-black-friday.jpg"], ["created_at", "2019-01-24 14:21:48.698181"], ["updated_at", "2019-01-24 14:21:48.698181"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ghostbusters"], ["img", "https://www.drawingtutorials101.com/drawing-tutorials/Cartoon-Movies/Ghostbusters/ghostbusters-logo/how-to-draw-Ghostbusters-Logo-step-0.png"], ["created_at", "2019-01-24 14:21:48.701643"], ["updated_at", "2019-01-24 14:21:48.701643"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWord Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Space Kitten"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pikachu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Ghostbusters"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Amazon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Black Friday"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Paul Ryan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Mulan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pirate"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWord Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Software Engineer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Star Wars"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDrawing Create (0.6ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Kitten"], ["img", "https://www.clipartmax.com/png/middle/39-399672_a-transparent-space-cat-for-you-all-space-cat-drawing.png"], ["created_at", "2019-01-24 14:22:15.875664"], ["updated_at", "2019-01-24 14:22:15.875664"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Amazon"], ["img", "https://format-com-cld-res.cloudinary.com/image/private/s--hsAYqKnI--/c_limit,g_center,h_65535,w_1600/a_auto,fl_keep_iptc.progressive,q_95/v1/d32b435aac96df828362a61915473477/amazon_sketch.jpg"], ["created_at", "2019-01-24 14:22:15.879755"], ["updated_at", "2019-01-24 14:22:15.879755"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Black Friday"], ["img", "http://www.sketchplease.com/wp-content/sketches/archangelo-black-friday.jpg"], ["created_at", "2019-01-24 14:22:15.882903"], ["updated_at", "2019-01-24 14:22:15.882903"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrawing Create (0.4ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ghostbusters"], ["img", "https://www.drawingtutorials101.com/drawing-tutorials/Cartoon-Movies/Ghostbusters/ghostbusters-logo/how-to-draw-Ghostbusters-Logo-step-0.png"], ["created_at", "2019-01-24 14:22:15.886451"], ["updated_at", "2019-01-24 14:22:15.886451"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWord Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Space Kitten"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pikachu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWord Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Ghostbusters"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Amazon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Black Friday"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Paul Ryan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Mulan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pirate"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Software Engineer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWord Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Star Wars"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDrawing Create (0.6ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Kitten"], ["img", "https://www.clipartmax.com/png/middle/39-399672_a-transparent-space-cat-for-you-all-space-cat-drawing.png"], ["created_at", "2019-01-24 14:22:38.649788"], ["updated_at", "2019-01-24 14:22:38.649788"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Amazon"], ["img", "https://format-com-cld-res.cloudinary.com/image/private/s--hsAYqKnI--/c_limit,g_center,h_65535,w_1600/a_auto,fl_keep_iptc.progressive,q_95/v1/d32b435aac96df828362a61915473477/amazon_sketch.jpg"], ["created_at", "2019-01-24 14:22:38.654097"], ["updated_at", "2019-01-24 14:22:38.654097"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Black Friday"], ["img", "http://www.sketchplease.com/wp-content/sketches/archangelo-black-friday.jpg"], ["created_at", "2019-01-24 14:22:38.656850"], ["updated_at", "2019-01-24 14:22:38.656850"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrawing Create (0.5ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ghostbusters"], ["img", "https://www.drawingtutorials101.com/drawing-tutorials/Cartoon-Movies/Ghostbusters/ghostbusters-logo/how-to-draw-Ghostbusters-Logo-step-0.png"], ["created_at", "2019-01-24 14:22:38.660882"], ["updated_at", "2019-01-24 14:22:38.660882"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(841640573534668110)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(841640573534668110)[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWord Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Space Kitten"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pikachu"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWord Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Ghostbusters"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWord Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Amazon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Black Friday"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Paul Ryan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Mulan"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pirate"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWord Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Software Engineer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWord Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Star Wars"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDrawing Create (0.5ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Space Kitten"], ["img", "https://www.clipartmax.com/png/middle/39-399672_a-transparent-space-cat-for-you-all-space-cat-drawing.png"], ["created_at", "2019-01-24 14:24:52.384222"], ["updated_at", "2019-01-24 14:24:52.384222"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mDrawing Create (0.2ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Amazon"], ["img", "https://format-com-cld-res.cloudinary.com/image/private/s--hsAYqKnI--/c_limit,g_center,h_65535,w_1600/a_auto,fl_keep_iptc.progressive,q_95/v1/d32b435aac96df828362a61915473477/amazon_sketch.jpg"], ["created_at", "2019-01-24 14:24:52.388181"], ["updated_at", "2019-01-24 14:24:52.388181"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Black Friday"], ["img", "http://www.sketchplease.com/wp-content/sketches/archangelo-black-friday.jpg"], ["created_at", "2019-01-24 14:24:52.391483"], ["updated_at", "2019-01-24 14:24:52.391483"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mDrawing Create (0.3ms)[0m  [1m[32mINSERT INTO "drawings" ("name", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ghostbusters"], ["img", "https://www.drawingtutorials101.com/drawing-tutorials/Cartoon-Movies/Ghostbusters/ghostbusters-logo/how-to-draw-Ghostbusters-Logo-step-0.png"], ["created_at", "2019-01-24 14:24:52.394975"], ["updated_at", "2019-01-24 14:24:52.394975"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBet Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Everything You Say For The Next 15 Minutes Must Be Sung To The Tune Of “Happy Birthday"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mBet Create (0.7ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Everything You Say For The Next 15 Minutes Must Be Sung To The Tune Of “Happy Birthday"], ["created_at", "2019-01-24 14:24:52.416963"], ["updated_at", "2019-01-24 14:24:52.416963"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Smell The Feet Of Everyone In The Room And Rank Them From Best To Worst"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mBet Create (0.3ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Smell The Feet Of Everyone In The Room And Rank Them From Best To Worst"], ["created_at", "2019-01-24 14:24:52.422083"], ["updated_at", "2019-01-24 14:24:52.422083"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mBet Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Eat A Teaspoon Of Either Mustard, Soy Sauce Or Hot Sauce"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mBet Create (0.2ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eat A Teaspoon Of Either Mustard, Soy Sauce Or Hot Sauce"], ["created_at", "2019-01-24 14:24:52.426499"], ["updated_at", "2019-01-24 14:24:52.426499"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mBet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Talk Without Closing Your Mouth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mBet Create (0.3ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Talk Without Closing Your Mouth"], ["created_at", "2019-01-24 14:24:52.431259"], ["updated_at", "2019-01-24 14:24:52.431259"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mBet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Call A Pizza Place And Ask If They Use Cruelty-Free Wheat In Their Dough"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mBet Create (0.3ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Call A Pizza Place And Ask If They Use Cruelty-Free Wheat In Their Dough"], ["created_at", "2019-01-24 14:24:52.436130"], ["updated_at", "2019-01-24 14:24:52.436130"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mandy"], ["created_at", "2019-01-24 14:24:52.460329"], ["updated_at", "2019-01-24 14:24:52.460329"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beau"], ["created_at", "2019-01-24 14:24:52.466354"], ["updated_at", "2019-01-24 14:24:52.466354"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mGame Create (1.7ms)[0m  [1m[32mINSERT INTO "games" ("word_one_id", "word_two_id", "bet_id", "winner_id", "loser_id", "drawing_one_id", "drawing_two_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["word_one_id", 1], ["word_two_id", 4], ["bet_id", 1], ["winner_id", 1], ["loser_id", 2], ["drawing_one_id", 1], ["drawing_two_id", 2], ["created_at", "2019-01-24 14:24:52.520375"], ["updated_at", "2019-01-24 14:24:52.520375"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("word_one_id", "word_two_id", "bet_id", "winner_id", "loser_id", "drawing_one_id", "drawing_two_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["word_one_id", 3], ["word_two_id", 5], ["bet_id", 2], ["winner_id", 2], ["loser_id", 1], ["drawing_one_id", 3], ["drawing_two_id", 4], ["created_at", "2019-01-24 14:24:52.532129"], ["updated_at", "2019-01-24 14:24:52.532129"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("word_one_id", "word_two_id", "bet_id", "winner_id", "loser_id", "drawing_one_id", "drawing_two_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["word_one_id", 5], ["word_two_id", 4], ["bet_id", 3], ["winner_id", 1], ["loser_id", 2], ["drawing_one_id", 1], ["drawing_two_id", 4], ["created_at", "2019-01-24 14:24:52.542082"], ["updated_at", "2019-01-24 14:24:52.542082"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:25:07 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/randomluck/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (121.38ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 20.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Game:0x007fdff9713910>):
+  
+app/models/user.rb:11:in `block in games_won'
+app/models/user.rb:8:in `collect'
+app/models/user.rb:8:in `games_won'
+app/models/user.rb:25:in `all_user_games'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:25:21 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (19.65ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Game:0x007fdff859fe90>):
+  
+app/models/user.rb:11:in `block in games_won'
+app/models/user.rb:8:in `collect'
+app/models/user.rb:8:in `games_won'
+app/models/user.rb:25:in `all_user_games'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:25:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (22.19ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.2ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Game:0x007fdff9730d80>):
+  
+app/models/user.rb:11:in `block in games_won'
+app/models/user.rb:8:in `collect'
+app/models/user.rb:8:in `games_won'
+app/models/user.rb:25:in `all_user_games'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:27:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.5ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (129.26ms)
+Completed 200 OK in 158ms (Views: 121.9ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:27:06 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (46.14ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:27:19 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Beau J", "user"=>{"name"=>"Beau J"}}
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:27:19 -0500
+Started GET "/bets" for 127.0.0.1 at 2019-01-24 09:27:19 -0500
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau J"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Beau J"], ["created_at", "2019-01-24 14:27:19.636261"], ["updated_at", "2019-01-24 14:27:19.636261"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 3]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (2.71ms)
+Completed 200 OK in 17ms (Views: 3.6ms | ActiveRecord: 5.2ms)
+
+
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Mandy", "user"=>{"name"=>"Mandy"}}
+Processing by BetsController#index as */*
+  [1m[35m (8.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mBet Load (2.7ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.65ms)
+Completed 200 OK in 22ms (Views: 1.2ms | ActiveRecord: 10.4ms)
+
+
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 2]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 3]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 4]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 5]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (53.26ms)
+Completed 200 OK in 73ms (Views: 52.7ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:28:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 3]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (41.99ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/bets" for 127.0.0.1 at 2019-01-24 09:28:43 -0500
+Processing by BetsController#index as */*
+  [1m[36mBet Load (1.1ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:28:43 -0500
+[active_model_serializers]   [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:28:43 -0500
+Processing by UsersController#create as JSON
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Beau J", "user"=>{"name"=>"Beau J"}}
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  Parameters: {"name"=>"Mandy", "user"=>{"name"=>"Mandy"}}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+[active_model_serializers]   [1m[36mWord Load (2.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau J"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mDrawing Load (1.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   ↳ app/models/bet.rb:8
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.85ms)
+[active_model_serializers]   [1m[36mDrawing Load (1.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 3.9ms)
+
+
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.63ms)
+Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 4.1ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 2]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 3]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 4]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 5]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (64.61ms)
+Completed 200 OK in 70ms (Views: 56.7ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/bets" for 127.0.0.1 at 2019-01-24 09:28:56 -0500
+Processing by BetsController#create as JSON
+Started GET "/words" for 127.0.0.1 at 2019-01-24 09:28:56 -0500
+  Parameters: {"bet"=>"Do a 2 minute wall sit or collapse trying"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for "Do a 2 minute wall sit or collapse trying":String
+Did you mean?  print):
+  
+app/controllers/bets_controller.rb:25:in `bet_params'
+app/controllers/bets_controller.rb:11:in `create'
+Processing by WordsController#index as */*
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 2]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 3]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 4]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 5]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 6]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 7]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 8]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 9]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 10]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (61.67ms)
+Completed 200 OK in 69ms (Views: 61.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:29:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.2ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 3]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (55.22ms)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:29:23 -0500
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:29:23 -0500
+Processing by UsersController#create as JSON
+Started GET "/bets" for 127.0.0.1 at 2019-01-24 09:29:23 -0500
+  Parameters: {"name"=>"Mandy", "user"=>{"name"=>"Mandy"}}
+Processing by UsersController#create as JSON
+Processing by BetsController#index as */*
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"name"=>"Beau", "user"=>{"name"=>"Beau"}}
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBet Load (2.0ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  ↳ app/controllers/bets_controller.rb:3
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (3.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:13
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.64ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.2ms)
+[active_model_serializers]   [1m[36mGame Load (2.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+Completed 200 OK in 22ms (Views: 4.8ms | ActiveRecord: 4.7ms)
+
+
+Completed 200 OK in 20ms (Views: 3.2ms | ActiveRecord: 4.6ms)
+
+
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 2]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 3]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 4]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 5]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (61.66ms)
+Completed 200 OK in 75ms (Views: 51.1ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2019-01-24 09:29:34 -0500
+Processing by WordsController#index as */*
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+Started POST "/bets" for 127.0.0.1 at 2019-01-24 09:29:34 -0500
+[active_model_serializers]   [1m[36mWord Load (1.6ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Processing by BetsController#create as JSON
+[active_model_serializers]   ↳ app/models/word.rb:8
+  Parameters: {"name"=>"Do a 2 minute wall sit or collapse trying", "bet"=>{"name"=>"Do a 2 minute wall sit or collapse trying"}}
+[active_model_serializers]   [1m[36mDrawing Load (1.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+[active_model_serializers]   ↳ app/models/word.rb:9
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   [1m[36mDrawing Load (1.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBet Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Do a 2 minute wall sit or collapse trying"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBet Create (0.9ms)[0m  [1m[32mINSERT INTO "bets" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Do a 2 minute wall sit or collapse trying"], ["created_at", "2019-01-24 14:29:34.750255"], ["updated_at", "2019-01-24 14:29:34.750255"]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   ↳ app/models/word.rb:10
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   [1m[36mGame Load (6.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 2]]
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 6]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered BetSerializer with ActiveModelSerializers::Adapter::JsonApi (6.03ms)
+[active_model_serializers]   [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 3]]
+Completed 200 OK in 26ms (Views: 8.5ms | ActiveRecord: 4.8ms)
+
+
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (1.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (1.7ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 4]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 5]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 6]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 7]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 8]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 9]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 10]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (89.64ms)
+Completed 200 OK in 93ms (Views: 71.9ms | ActiveRecord: 21.0ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2019-01-24 09:30:56 -0500
+Started POST "/words" for 127.0.0.1 at 2019-01-24 09:30:56 -0500
+Processing by WordsController#create as JSON
+  Parameters: {"name"=>"underwear", "word"=>{"name"=>"underwear"}}
+Processing by WordsController#create as JSON
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"name"=>"Cheeseburger", "word"=>{"name"=>"Cheeseburger"}}
+  ↳ app/controllers/words_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/words_controller.rb:11
+  [1m[36mWord Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "underwear"], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:11
+  [1m[36mWord Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Cheeseburger"], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:11
+  [1m[36mWord Create (0.9ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "underwear"], ["created_at", "2019-01-24 14:30:56.830641"], ["updated_at", "2019-01-24 14:30:56.830641"]]
+  ↳ app/controllers/words_controller.rb:11
+  [1m[36mWord Create (0.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cheeseburger"], ["created_at", "2019-01-24 14:30:56.833137"], ["updated_at", "2019-01-24 14:30:56.833137"]]
+  ↳ app/controllers/words_controller.rb:11
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/words_controller.rb:11
+  ↳ app/controllers/words_controller.rb:11
+[active_model_serializers]   [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 11]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 12]]
+[active_model_serializers] Rendered WordSerializer with ActiveModelSerializers::Adapter::JsonApi (3.31ms)
+[active_model_serializers]   ↳ app/models/word.rb:7
+Completed 200 OK in 21ms (Views: 3.0ms | ActiveRecord: 8.4ms)
+
+
+[active_model_serializers] Rendered WordSerializer with ActiveModelSerializers::Adapter::JsonApi (4.29ms)
+Completed 200 OK in 21ms (Views: 5.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-24 09:46:32 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+[active_model_serializers]   [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.4ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 2]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/user.rb:11
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."winner_id" = $1[0m  [["winner_id", 3]]
+[active_model_serializers]   ↳ app/models/user.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (90.03ms)
+Completed 200 OK in 111ms (Views: 91.7ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/bets" for 127.0.0.1 at 2019-01-24 09:46:40 -0500
+Processing by BetsController#index as */*
+  [1m[36mBet Load (0.7ms)[0m  [1m[34mSELECT "bets".* FROM "bets"[0m
+  ↳ app/controllers/bets_controller.rb:3
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:46:40 -0500
+[active_model_serializers]   [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+Started POST "/users" for 127.0.0.1 at 2019-01-24 09:46:40 -0500
+[active_model_serializers]   [1m[36mWord Load (2.6ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (3.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 2]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Mandy", "user"=>{"name"=>"Mandy"}}
+[active_model_serializers]   [1m[36mWord Load (2.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+[active_model_serializers]   [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Processing by UsersController#create as JSON
+[active_model_serializers]   ↳ app/models/bet.rb:7
+  Parameters: {"name"=>"Beau", "user"=>{"name"=>"Beau"}}
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Mandy"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   [1m[36mDrawing Load (1.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   ↳ app/models/bet.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Beau"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (0.9ms)
+[active_model_serializers]   ↳ app/models/bet.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 25ms (Views: 3.2ms | ActiveRecord: 7.2ms)
+
+
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.49ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 3.8ms | ActiveRecord: 1.8ms)
+
+
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 3]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:7
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/bet.rb:9
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 4]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 5]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers]   [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."bet_id" = $1[0m  [["bet_id", 6]]
+[active_model_serializers]   ↳ app/models/bet.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (96.44ms)
+Completed 200 OK in 101ms (Views: 81.3ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2019-01-24 09:46:44 -0500
+Processing by WordsController#index as */*
+  [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/controllers/words_controller.rb:3
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.9ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+Started POST "/bets" for 127.0.0.1 at 2019-01-24 09:46:44 -0500
+[active_model_serializers]   [1m[36mWord Load (1.2ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+Processing by BetsController#create as JSON
+[active_model_serializers]   [1m[36mDrawing Load (2.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"name"=>"Do a 2 minute wall sit or collapse trying", "bet"=>{"name"=>"Do a 2 minute wall sit or collapse trying"}}
+[active_model_serializers]   ↳ app/models/word.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   ↳ app/models/word.rb:9
+  [1m[36mBet Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "bets" WHERE "bets"."name" = $1 LIMIT $2[0m  [["name", "Do a 2 minute wall sit or collapse trying"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   ↳ app/models/word.rb:10
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bets_controller.rb:11
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers] Rendered BetSerializer with ActiveModelSerializers::Adapter::JsonApi (0.85ms)
+Completed 200 OK in 14ms (Views: 2.8ms | ActiveRecord: 4.1ms)
+
+
+[active_model_serializers]   [1m[36mBet Load (1.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 2]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 3]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 4]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 5]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Word Load (0.0ms)[0m  [1m[34mSELECT  "words".* FROM "words" WHERE "words"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:8
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mBet Load (0.3ms)[0m  [1m[34mSELECT  "bets".* FROM "bets" WHERE "bets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/models/word.rb:10
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 6]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 7]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 8]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 9]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 10]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 11]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."word_one_id" = $1[0m  [["word_one_id", 12]]
+[active_model_serializers]   ↳ app/models/word.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (86.28ms)
+Completed 200 OK in 89ms (Views: 75.8ms | ActiveRecord: 13.4ms)
+
+
+Started POST "/words" for 127.0.0.1 at 2019-01-24 09:46:47 -0500
+Started POST "/words" for 127.0.0.1 at 2019-01-24 09:46:47 -0500
+Processing by WordsController#create as JSON
+Processing by WordsController#create as JSON
+  Parameters: {"name"=>"Pikachu", "word"=>{"name"=>"Pikachu"}}
+  Parameters: {"name"=>"underwear", "word"=>{"name"=>"underwear"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/words_controller.rb:11
+  ↳ app/controllers/words_controller.rb:11
+  [1m[36mWord Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "Pikachu"], ["LIMIT", 1]]
+  [1m[36mWord Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "words" WHERE "words"."name" = $1 LIMIT $2[0m  [["name", "underwear"], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:11
+  ↳ app/controllers/words_controller.rb:11
+  [1m[35m (5.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/words_controller.rb:11
+  ↳ app/controllers/words_controller.rb:11
+[active_model_serializers] Rendered WordSerializer with ActiveModelSerializers::Adapter::JsonApi (1.2ms)
+[active_model_serializers] Rendered WordSerializer with ActiveModelSerializers::Adapter::JsonApi (0.67ms)
+Completed 200 OK in 34ms (Views: 15.1ms | ActiveRecord: 8.0ms)
+
+
+Completed 200 OK in 33ms (Views: 1.4ms | ActiveRecord: 1.6ms)
+
+
