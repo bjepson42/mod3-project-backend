@@ -25,5 +25,5 @@ class Word < ApplicationRecord
     @all_word_games << {word_game_twos: self.word_game_ones}
     @all_word_games.flatten
   end
-
+  validates :name, uniqueness: true
 end

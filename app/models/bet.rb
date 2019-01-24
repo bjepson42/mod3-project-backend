@@ -9,4 +9,5 @@ class Bet < ApplicationRecord
       winner: game.winner, loser: game.loser, bet: game.bet}
     end
   end
+  validates :bet, uniqueness: true
 end

@@ -26,4 +26,6 @@ class User < ApplicationRecord
     @all_user_games << {games_lost: self.games_lost}
     @all_user_games.flatten
   end
+
+  validates :name, uniqueness: true
 end
