@@ -27,5 +27,5 @@ class User < ApplicationRecord
     @all_user_games.flatten
   end
 
-  validates :name, uniqueness: true
+  validates :name, uniqueness: { case_sensitive: false }
 end
